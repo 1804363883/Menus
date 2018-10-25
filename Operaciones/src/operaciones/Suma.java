@@ -117,7 +117,6 @@ public class Suma extends javax.swing.JInternalFrame{
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
