@@ -52,6 +52,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGap(0, 333, Short.MAX_VALUE)
         );
 
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/calculator.png"))); // NOI18N
         jMenu1.setText("Operaciones");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
@@ -146,7 +147,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
-       this.dispose();
+        this.dispose();
     }//GEN-LAST:event_jMenu2MouseClicked
 
     /**
