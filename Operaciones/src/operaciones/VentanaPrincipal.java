@@ -38,6 +38,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Operaciones");
+        setResizable(false);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -50,12 +51,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGap(0, 305, Short.MAX_VALUE)
         );
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/calculator.png"))); // NOI18N
         jMenu1.setText("Operaciones");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         jMenuItem1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/plus-box.png"))); // NOI18N
         jMenuItem1.setText("Suma");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,7 +64,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/minus-box.png"))); // NOI18N
         jMenuItem2.setText("Resta");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,12 +73,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/multiplication-box.png"))); // NOI18N
         jMenuItem3.setText("Multiplicación");
         jMenu1.add(jMenuItem3);
 
         jMenuItem4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/division-box.png"))); // NOI18N
         jMenuItem4.setText("División");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,7 +87,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir.png"))); // NOI18N
         jMenu2.setText("Salir");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jMenu2.addActionListener(new java.awt.event.ActionListener() {
@@ -127,16 +122,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-       Suma suma= new Suma();
-       jDesktopPane1.add(suma);
-       suma.setVisible(true);
-       
+        Suma suma = new Suma();
+        jDesktopPane1.add(suma);
+        suma.setVisible(true);
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         Resta resta = new Resta();
-        resta.show();
-        this.dispose();
+        jDesktopPane1.add(resta);
+        resta.setVisible(true);
+
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
