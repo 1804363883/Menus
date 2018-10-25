@@ -7,7 +7,7 @@ package operaciones;
 
 /**
  *
- * @author Roberto Altamirano
+ * @author Roberto Altamiranosdfghj
  */
 public class Multiplicacion extends javax.swing.JInternalFrame {
 
