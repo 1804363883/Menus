@@ -16,6 +16,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      */
     public VentanaPrincipal() {
         initComponents();
+
     }
 
     /**
@@ -36,7 +37,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Operaciones");
         setResizable(false);
 
@@ -74,6 +75,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jMenuItem3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jMenuItem3.setText("Multiplicación");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem3);
 
         jMenuItem4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -89,9 +95,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jMenu2.setText("Salir");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jMenu2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu2ActionPerformed(evt);
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
             }
         });
         jMenuBar1.add(jMenu2);
@@ -113,12 +119,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jMenu2ActionPerformed
-
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
+        Division div = new Division();
+        jDesktopPane1.add(div);
+        div.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -134,6 +138,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         resta.setVisible(true);
 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        Multiplicacion mul = new Multiplicacion();
+        jDesktopPane1.add(mul);
+        mul.show();
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+       this.dispose();
+    }//GEN-LAST:event_jMenu2MouseClicked
 
     /**
      * @param args the command line arguments
