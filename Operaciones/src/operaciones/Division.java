@@ -18,6 +18,8 @@ public class Division extends javax.swing.JInternalFrame {
         initComponents();
         txtNum1.requestFocus();
         txtRes.setEnabled(false);
+        // hola
+        
     }
 
     public void calcular() {
